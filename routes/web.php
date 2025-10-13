@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ParticipantController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,5 +23,5 @@ Route::get('/teste', function () {
     return 'Laravel está funcionando!';
 });
 
-Route::get('/',[ParticipantController::class, 'index'])->name('home'); // Rota para exibir o formulário de inscrição
+Route::get('/',[HomeController::class, 'index'])->name('home'); // Rota para exibir o formulário de inscrição
 Route::post('/inscricao', [ParticipantController::class, 'store'])->name('inscricao.store'); // Rota para processar o formulário de inscrição

@@ -7,9 +7,6 @@ use App\Models\Participant;
 
 class ParticipantController extends Controller
 {
-    public function index(){
-        return view('participants.create'); // Retorna a view para criar um participante
-    }
 
     public function store(Request $request){
         // Validação dos dados recebidos
@@ -21,7 +18,7 @@ class ParticipantController extends Controller
 
         // Remove caracteres não numéricos do telefone
         $validated['phone'] = preg_replace('/\D/', '', $validated['phone']);
-        
+
         // Criação do participante no banco de dados
         Participant::create($validated); // Usa o modelo Participant validado para criar um novo registro
 
