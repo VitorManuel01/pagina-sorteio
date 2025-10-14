@@ -93,7 +93,6 @@ php artisan serve
 app/
  ├── Http/Controllers/     # Controladores da aplicação
  ├── Models/               # Modelos Eloquent
- ├── Notifications/         # Notificações OTP
  ├── TwilioSMSClient.php   # Integração com Twilio
 resources/views/           # Templates Blade
 routes/web.php             # Rotas web
@@ -129,5 +128,4 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 ## ✨ Autor
 
 **Vitor Manuel Pereira dos Santos**  
-💻 Proto–anarquista de mercado apaixonado por código e sistemas justos.  
 📬 [GitHub](https://github.com/vitormanuel01)
