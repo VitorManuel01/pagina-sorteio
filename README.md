@@ -24,7 +24,6 @@ Os **cupons fiscais** dos participantes serão processados em uma **API separada
 | SMS | [Twilio SDK](https://www.twilio.com/docs/libraries/php) |
 | Frontend | Blade, Vite, CSS nativo |
 | Banco de Dados | MySQL |
-| Testes | PHPUnit |
 | Outras | Laravel Sanctum, GuzzleHTTP |
 
 ---
@@ -106,7 +105,7 @@ routes/api.php             # Rotas para futura integração com API Java
 1. O usuário informa o **CPF**.  
 2. O sistema busca o participante e envia o código via **SMS (Twilio)**.  
 3. O participante insere o código recebido.  
-4. Caso o código seja válido, ele é autenticado e redirecionado para a **página inicial**.
+4. Caso o código seja válido, ele é autenticado e redirecionado para a **página do usuário**.
 
 ---
 
