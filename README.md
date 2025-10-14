@@ -118,12 +118,6 @@ Os cupons fiscais dos participantes serão gerenciados por uma **API externa** e
 
 ---
 
-## 🧾 Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
-
----
-
 ## ✨ Autor
 
 **Vitor Manuel Pereira dos Santos**  
