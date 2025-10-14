@@ -31,7 +31,7 @@
         font-size: 1.4rem;
         margin-bottom: 1.5rem;
         font-weight: 600;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
     }
 
     .form-floating {
@@ -115,15 +115,18 @@
     <h3>Inscreva-se no Sorteio</h3>
 
     <!-- mensagem de sucesso -->
-    @if(session('success')) 
+    @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
-    @endif 
+    @endif
 
     <!-- Formulário de inscrição -->
     <form action="{{ route('inscricao.store') }}" method="POST">
         @csrf
         <div class="form-floating">
             <input type="text" name="name" id="name" class="form-control" placeholder="Nome" required>
+        </div>
+        <div class="form-floating">
+            <input type="text" name="CPF" id="CPF" class="form-control" placeholder="CPF" required pattern="\d*" inputmode="numeric">
         </div>
 
         <div class="form-floating">

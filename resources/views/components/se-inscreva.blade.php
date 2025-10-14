@@ -1,5 +1,5 @@
 <style>
-    /* ======= (Celulares e Tablets) ======= */
+    /* ======= layout pra tablet e celular ======= */
     section.sorteio-section {
         background: linear-gradient(90deg, #43ea7a 0%, #1abc9c 100%);
         /* Padding pra garantir o espaçamento nas bordas da tela */
@@ -8,7 +8,7 @@
 
     .sorteio-container {
         display: flex;
-        flex-direction: column; /* Layout empilhado por padrão */
+        flex-direction: column; /* nos mobiles a imagem fica em cima e o form em baixo */
         align-items: center;
         justify-content: center;
         gap: 2rem;
@@ -35,10 +35,10 @@
         justify-content: center;
     }
 
-    /* ======= TELAS MÉDIAS E GRANDES (Apenas Desktops) ======= */
+    /* ======= Layout pra telas de desktop ======= */
     @media (min-width: 992px) {
         .sorteio-container {
-            flex-direction: row; /* Ativa o layout lado a lado APENAS em desktops */
+            flex-direction: row; /* No desktop ele fica com a imagem de um lado e o form do outro */
             gap: 3rem;
             align-items: stretch;
         }
@@ -61,7 +61,6 @@
         }
     }
 
-    /* ======= TELAS GRANDES (Desktops grandes) ======= */
     @media (min-width: 1200px) {
         section.sorteio-section {
             padding: 4rem 2rem;
