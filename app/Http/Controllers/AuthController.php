@@ -68,28 +68,28 @@ class AuthController extends Controller
         
     }
 
-    public function validateOTP(Request $request)
-    {
-        $validated = $request->validate([
-            'otp' => 'required|string|size:6', // Ajuste com base no token_length no config
-        ]);
+    // public function validateOTP(Request $request)
+    // {
+    //     $validated = $request->validate([
+    //         'otp' => 'required|string|size:6', //com base no token_length no config
+    //     ]);
 
-        $phone = $request->session()->get('phone'); // Ou passe via hidden input no form
+    //     $phone = $request->session()->get('phone'); // Ou via hidden input no form
 
-        try {
-            $participant = $this->OTPService->validate($phone, $validated['otp']);
+    //     try {
+    //         $participant = $this->OTPService->validate($phone, $validated['otp']);
 
-            // Faça o login (assumindo Participant é autenticável; se não, ajuste)
-            Auth::login($participant);
+    //         // Fazendo o login 
+    //         Auth::login($participant);
 
-            return redirect()->route('home')->with('success', 'Login realizado com sucesso!');
-        } catch (InvalidOTPTokenException $e) {
-            return redirect()->back()->withErrors(['otp' => 'Código inválido ou expirado.']);
-        } catch (\Exception $e) {
-            Log::error('Falha ao validar OTP: ' . $e->getMessage());
-            return redirect()->back()->withErrors(['error' => 'Erro ao validar o código. Tente novamente.']);
-        }
-    }
+    //         return redirect()->route('home')->with('success', 'Login realizado com sucesso!');
+    //     } catch (InvalidOTPTokenException $e) {
+    //         return redirect()->back()->withErrors(['otp' => 'Código inválido ou expirado.']);
+    //     } catch (\Exception $e) {
+    //         Log::error('Falha ao validar OTP: ' . $e->getMessage());
+    //         return redirect()->back()->withErrors(['error' => 'Erro ao validar o código. Tente novamente.']);
+    //     }
+    // }
 }
 
     // public function sendOTP(Request $request): JsonResponse
