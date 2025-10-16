@@ -24,7 +24,6 @@ Os **cupons fiscais** dos participantes serão processados em uma **API separada
 | SMS | [Twilio SDK](https://www.twilio.com/docs/libraries/php) |
 | Frontend | Blade, Vite, CSS nativo |
 | Banco de Dados | MySQL |
-| Testes | PHPUnit |
 | Outras | Laravel Sanctum, GuzzleHTTP |
 
 ---
@@ -93,7 +92,6 @@ php artisan serve
 app/
  ├── Http/Controllers/     # Controladores da aplicação
  ├── Models/               # Modelos Eloquent
- ├── Notifications/         # Notificações OTP
  ├── TwilioSMSClient.php   # Integração com Twilio
 resources/views/           # Templates Blade
 routes/web.php             # Rotas web
@@ -107,7 +105,7 @@ routes/api.php             # Rotas para futura integração com API Java
 1. O usuário informa o **CPF**.  
 2. O sistema busca o participante e envia o código via **SMS (Twilio)**.  
 3. O participante insere o código recebido.  
-4. Caso o código seja válido, ele é autenticado e redirecionado para a **página inicial**.
+4. Caso o código seja válido, ele é autenticado e redirecionado para a **página do usuário**.
 
 ---
 
@@ -120,14 +118,7 @@ Os cupons fiscais dos participantes serão gerenciados por uma **API externa** e
 
 ---
 
-## 🧾 Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
-
----
-
 ## ✨ Autor
 
 **Vitor Manuel Pereira dos Santos**  
-💻 Proto–anarquista de mercado apaixonado por código e sistemas justos.  
 📬 [GitHub](https://github.com/vitormanuel01)
